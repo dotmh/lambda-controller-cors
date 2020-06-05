@@ -1,0 +1,25 @@
+{
+  "name": "@dotmh/lambda-controller-cors",
+  "version": "0.1.0",
+  "description": "A Plugin to add Cors support to Lambda Controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotmh/lambda-controller-cors.git"
+  },
+  "keywords": [
+    "Lambda",
+    "Serverless",
+    "DotMH",
+    "Cors"
+  ],
+  "author": "Martin Haynes <oss@dotmh.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dotmh/lambda-controller-cors/issues"
+  },
+  "homepage": "https://github.com/dotmh/lambda-controller-cors#readme"
+}
