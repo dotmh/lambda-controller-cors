@@ -2,6 +2,9 @@
 
 Lambda Control - CORS
 =====================
+[![DotMH Future Gadget Lab](https://img.shields.io/badge/DotMH-.dev-red.svg?style=flat-square)](https://www.dotmh.io)
+[![Lambda Controller Plugin](https://img.shields.io/badge/Plugin-λ%20Controller-red.svg?style=flat-square&color=F15024)](https://github.com/dotmh/lambda-controller)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/xojs/xo)
 
 Adds Cross Origin Resource Sharing (CORS) support to Lambda Controller. 
 
