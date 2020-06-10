@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body style="background: transparent;">
+    <script src="scripts/docstrap.lib.js"></script>
+    <script src="scripts/lunr.min.js"></script>
+    <script src="scripts/fulltext-search.js"></script>
+
+    <script type="text/x-docstrap-searchdb">
+    {"modules.list.html":{"id":"modules.list.html","title":"Modules","body":" Dotmh - Lambda Controller - Request Body Modules lambda-controller-cors Modules × Search results Close "},"index.html":{"id":"index.html","title":"Index","body":" Dotmh - Lambda Controller - Request Body Modules lambda-controller-cors Lambda Control - CORS Adds Cross Origin Resource Sharing (CORS) support to Lambda Controller. Installation To Install npm i @dotmh/lambda-controller-cors Requires Lambda Controller to be installed. Lambda Controller is a peer dependancy and so won't be installed automatically Usage The CORS plugin usage is slightly different to other plugins. To use CORS I recommend it you add it to the contrustor of your controller. i.e. const Controller = require('@dotmh/lambda-controller'); const cors = require('@dotmh/lambda-controller-cors'); class MyController extends Controller { constructor(event, ctx, cb) { super(event,ctx,cb); this.add(cors()); this.cors(); } } This will add the cors plugin and configure the cors headers. You will notice that we call a function to add, this is because the cors plugin supplies a factory unlike other plugins. Configuration The CORS plugin supplies a factory unlike other Lambda Controller plugins. This is so that you can pass it a configuration. The CORS plugin takes a list of allowed origins that CORS requests can come from. Configuration Object // .... your controller class this.add(cors({ allowed: [ 'localhost', 'prod.example.com', 'dev.example.com' ] }}); // ... the rest of your controller Configuration Options Allowed allowed accepts ether a list of allowed domains , a single domain or a ''. Whent the '' is used cors is added to all hosts i.e. allow all. Extra Steps To fully support CORS in AWS API Gateway we have to do some extra configuration. If you are using the Servless Framework. Options Route CORS uses a preflight to the route to get the CORS headers before making a full request. To support this we have to configure the a route for options. To support this the mixin automatically adds a cors route handler to your controller called corsOptions. So we need to configure a handler for that module.exports.corsOptions = function (event, ctx, callback) { (new Controller(event, ctx, callback)).corsOptions(); }; and then add that as an http event in the serverless.yml functions: corsOptions: handler: handler.corsOptions events: - http: path: \"/\" method: options cors: origin: '*' headers: - Content-Type - X-Amz-Date - Authorization - X-Api-Key - X-Amz-Security-Token - X-Amz-User-Agent allowCredentials: true Every other route API Gateway needs to know what it should do with CORS requests. I.e. it needs enabling. This has to be done on everyone of your route To do this you have to add the cors property to your route. cors: origin: '*' headers: - Content-Type - X-Amz-Date - Authorization - X-Api-Key - X-Amz-Security-Token - X-Amz-User-Agent allowCredentials: true PLEASE NOTE I hope to update this readme with the steps required when using AWS SAM soon. Documentation For the API documentation see https://dotmh.github.io/lambda-controller-request-body/ Or to read locally npm run readdocs Licence This package is Treeware. If you use it in production, then we ask that you buy the world a tree to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats. Credits Logo design by @dotmh × Search results Close "},"module-lambda-controller-cors.html":{"id":"module-lambda-controller-cors.html","title":"Module: lambda-controller-cors","body":" Dotmh - Lambda Controller - Request Body Modules lambda-controller-cors Module: lambda-controller-cors (require(\"lambda-controller-cors\"))(config) A factory to create the CORS plugin object. Parameters: Name Type Description config object The configuration object for the factory Properties: Name Type Description allowed string | array A domain, '*' or list of domains to return cors headers for. Author: Martin Haynes Returns: The mixin object suitable to be added to lambda controller as a plugin. Type object Members &lt;inner&gt; endpoint Returns the full origin but without the path. Author: Martin Haynes &lt;inner&gt; origin Returns the origin subdomain and domain. Author: Martin Haynes &lt;inner&gt; originAsURL Return the origin information as a URL object Author: Martin Haynes See: https://nodejs.org/dist/latest-v12.x/docs/api/url.html#url_class_url Methods &lt;inner&gt; cors() If the request is a cors request and the origin is whitelisted this adds the required headers to the response. Author: Martin Haynes &lt;inner&gt; corsOptions() This responds to the cors preflight with the correct headers. &lt;inner&gt; isAllowed() Checks to see if the current origin is allowed on the allowed list. Author: Martin Haynes Returns: true it is allowed, false it is not. Type boolean &lt;inner&gt; isCorsRequest() Detects whether the origin is in the header i.e. it is an cors request Author: Martin Haynes Returns: true its a cors request, false it is not. Type boolean × Search results Close "}}
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            Searcher.init();
+        });
+
+        $(window).on("message", function(msg) {
+            var msgData = msg.originalEvent.data;
+
+            if (msgData.msgid != "docstrap.quicksearch.start") {
+                return;
+            }
+
+            var results = Searcher.search(msgData.searchTerms);
+
+            window.parent.postMessage({"results": results, "msgid": "docstrap.quicksearch.done"}, "*");
+        });
+    </script>
+</body>
+</html>
