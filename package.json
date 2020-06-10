@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/dotmh/lambda-controller-cors/issues"
   },
-  "homepage": "https://github.com/dotmh/lambda-controller-cors#readme"
+  "homepage": "https://github.com/dotmh/lambda-controller-cors#readme",
+  "devDependencies": {
+    "@dotmh/lambda-controller": "^1.2.4",
+    "jest": "^26.0.1",
+    "xo": "^0.32.0"
+  },
+  "peerDependencies": {
+    "@dotmh/lambda-controller": "^1.2.4"
+  }
 }
