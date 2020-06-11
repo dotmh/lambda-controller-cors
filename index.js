@@ -23,7 +23,7 @@ const {URL} = require('url');
 	* A factory to create the CORS plugin object.
 	*
 	* @param {object} config The configuration object for the factory
-	*		@property {string | array} allowed A domain, '*' or list of domains to return cors headers for.
+	*		@property {string | array} [allowed=*] A domain, '*' or list of domains to return cors headers for.
 	*
 	* @return {object} The mixin object suitable to be added to lambda controller as a plugin.
 	*
