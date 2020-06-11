@@ -1,0 +1,17 @@
+{
+	"plugins" : [
+		"plugins/markdown"
+	],
+	"opts": {
+		"template": "./node_modules/ink-docstrap/template",
+		"readme" : "./readme.md",
+		"destination" : "docs"
+	},
+	"templates": {
+		"theme" : "simplex",
+		"systemName" : "Dotmh - Lambda Controller - Request Body",
+		"inverseNav": true,
+		"syntaxTheme" : "dark",
+		"copyright" : "Copyright DotMH 2020, Licensed Under Apache-2"
+	}
+}

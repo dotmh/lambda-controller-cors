@@ -4,7 +4,10 @@
   "description": "A Plugin to add Cors support to Lambda Controller",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "xo",
+    "docs": "jsdoc index.js -c ./jsdoc.json",
+    "readdocs": "npm run docs && npx http-server ./docs"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/dotmh/lambda-controller-cors/issues"
   },
-  "homepage": "https://github.com/dotmh/lambda-controller-cors#readme"
+  "homepage": "https://github.com/dotmh/lambda-controller-cors#readme",
+  "devDependencies": {
+    "@dotmh/lambda-controller": "^1.2.4",
+    "ink-docstrap": "^1.3.2",
+    "jest": "^26.0.1",
+    "jsdoc": "^3.6.4",
+    "xo": "^0.32.0"
+  },
+  "peerDependencies": {
+    "@dotmh/lambda-controller": "^1.2.4"
+  }
 }
