@@ -34,5 +34,24 @@
   },
   "peerDependencies": {
     "@dotmh/lambda-controller": "^1.2.4"
+  },
+  "xo": {
+    "ignores": [
+      "specs",
+      "docs"
+    ],
+    "rules": {
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ]
+    },
+    "env": [
+      "jest"
+    ]
   }
 }
