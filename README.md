@@ -73,7 +73,8 @@ Extra Steps
 
 To fully support CORS in AWS API Gateway we have to do some extra configuration. If you are using the [Servless Framework](https://www.serverless.com/open-source/).
 
-### Options Route
+Options Route
+-------------
 
 CORS uses a preflight to the route to get the CORS headers before making a full request. To support this we have to configure the a route for options. To support this the mixin automatically adds a cors route handler to your controller called `corsOptions`. So we need to configure a handler for that 
 
@@ -105,7 +106,8 @@ functions:
             allowCredentials: true
 ```
 
-### Every other route
+Every other route
+-----------------
 
 API Gateway needs to know what it should do with CORS requests. I.e. it needs enabling. This has to be done on everyone of your route
 
@@ -127,7 +129,7 @@ cors:
 __PLEASE NOTE__ I hope to update this readme with the steps required when using [AWS SAM](https://aws.amazon.com/serverless/sam/) soon. 
 
 Documentation
--------------
+=============
 For the API documentation see <https://dotmh.github.io/lambda-controller-request-body/>
 
 Or to read locally 
@@ -136,11 +138,12 @@ Or to read locally
 npm run readdocs
 ```
 
-## Licence            
+Licence            
+=======
 
 This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/dotmh/lambda-controller-request-body) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
 
 Credits
--------
+=======
 
 Logo design by [@dotmh](https://www.dotmh.io)
