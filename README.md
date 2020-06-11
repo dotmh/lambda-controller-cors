@@ -9,6 +9,9 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/46687995c7544ce3a72c36e6f978befd)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=dotmh/lambda-controller-cors&utm_campaign=Badge_Coverage)
 ![Build](https://dotmh.semaphoreci.com/badges/lambda-controller-cors.svg)
 [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square)](https://plant.treeware.earth/dotmh/lambda-controller)
+![NPM](https://img.shields.io/npm/l/@dotmh/lambda-controller-cors?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@dotmh/lambda-controller-cors?style=flat-square)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 Adds Cross Origin Resource Sharing (CORS) support to Lambda Controller. 
 
