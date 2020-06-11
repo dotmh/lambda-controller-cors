@@ -59,6 +59,9 @@
     ]
   },
   "remarkConfig": {
+    "settings" : {
+      "setext": true
+    },
     "plugins": ["remark-preset-lint-recommended"]
   }
 }
