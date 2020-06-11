@@ -1,4 +1,4 @@
-![Lambda Controller Logo](logo.svg)
+![Lambda Controller Logo](https://raw.githubusercontent.com/dotmh/lambda-controller-cors/master/logo.svg)
 
 # Lambda Control - CORS
 
@@ -6,7 +6,9 @@
 [![Lambda Controller Plugin](https://img.shields.io/badge/Plugin-λ%20Controller-red.svg?style=flat-square&color=F15024)](https://github.com/dotmh/lambda-controller)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/xojs/xo)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/46687995c7544ce3a72c36e6f978befd)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dotmh/lambda-controller-cors&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/46687995c7544ce3a72c36e6f978befd)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=dotmh/lambda-controller-cors&utm_campaign=Badge_Coverage)
 ![Build](https://dotmh.semaphoreci.com/badges/lambda-controller-cors.svg)
+[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square)](https://plant.treeware.earth/dotmh/lambda-controller)
 
 Adds Cross Origin Resource Sharing (CORS) support to Lambda Controller. 
 
@@ -127,7 +129,7 @@ __PLEASE NOTE__ I hope to update this readme with the steps required when using 
 
 ## Documentation
 
-For the API documentation see <https://dotmh.github.io/lambda-controller-request-body/>
+For the API documentation see <https://dotmh.github.io/lambda-controller-cors/>
 
 Or to read locally 
 
