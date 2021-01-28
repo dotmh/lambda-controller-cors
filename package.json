@@ -1,6 +1,6 @@
 {
   "name": "@dotmh/lambda-controller-cors",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Plugin to add Cors support to Lambda Controller",
   "main": "index.js",
   "scripts": {
