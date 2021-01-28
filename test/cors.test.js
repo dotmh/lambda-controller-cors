@@ -92,6 +92,20 @@ describe("cors", () => {
 				body: expect.anything()
 			});
 		});
+
+		it('should add extra headers from the config', () => {
+			controller.add(cors({preflightHeaders: ['x-api-key']}));
+			controller.corsOptions();
+			expect(cb).toHaveBeenCalledWith(null, {
+				headers: expect.objectContaining({
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, useragent, x-api-key",
+					"Access-Control-Allow-Origin": "http://127.0.0.1:8888",
+					"Access-Control-Allow-Credentials": "true"
+				}),
+				statusCode: 200,
+				body: expect.anything()
+			});		
+		})
 	});
 
 	describe("isCorsRequest", () => {

@@ -32,7 +32,8 @@ const {URL} = require("url");
 module.exports = (config = {}) => {
 	const _config = {
 		...{
-			allowed: "*"
+			allowed: "*",
+			preflightHeaders: []
 		},
 		...config
 	};
@@ -125,9 +126,16 @@ module.exports = (config = {}) => {
 		 */
 		corsOptions() {
 			if (this.isCorsRequest() && this.isAllowed()) {
+				const defaultPreflightHeaders = [
+					'Origin', 
+					'X-Requested-With', 
+					'Content-Type', 
+					'Accept', 
+					'useragent'
+				]
 				this.addHeader("Access-Control-Allow-Origin", this.endpoint);
 				this.addHeader("Access-Control-Allow-Credentials", "true");
-				this.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, useragent");
+				this.addHeader("Access-Control-Allow-Headers", [...defaultPreflightHeaders, ..._config.preflightHeaders].join(', '));
 			}
 
 			this.send();
