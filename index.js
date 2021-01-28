@@ -127,7 +127,7 @@ module.exports = (config = {}) => {
 			if (this.isCorsRequest() && this.isAllowed()) {
 				this.addHeader("Access-Control-Allow-Origin", this.endpoint);
 				this.addHeader("Access-Control-Allow-Credentials", "true");
-				this.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+				this.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, useragent");
 			}
 
 			this.send();
