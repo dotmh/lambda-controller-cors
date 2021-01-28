@@ -84,7 +84,9 @@ describe("cors", () => {
 			controller.corsOptions();
 			expect(cb).toHaveBeenCalledWith(null, {
 				headers: expect.objectContaining({
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+					"Access-Control-Allow-Origin": "http://127.0.0.1:8888",
+					"Access-Control-Allow-Credentials": "true"
 				}),
 				statusCode: 200,
 				body: expect.anything()
@@ -111,7 +113,7 @@ describe("cors", () => {
 			});
 
 			it("should return false", () => {
-				nonCorsController.add(cors());
+				nonCorsController.add(cors({allowed: "127.0.0.1"}));
 				expect(nonCorsController.isCorsRequest()).toBe(false);
 			});
 		});
