@@ -84,7 +84,7 @@ describe("cors", () => {
 			controller.corsOptions();
 			expect(cb).toHaveBeenCalledWith(null, {
 				headers: expect.objectContaining({
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, useragent",
 					"Access-Control-Allow-Origin": "http://127.0.0.1:8888",
 					"Access-Control-Allow-Credentials": "true"
 				}),
